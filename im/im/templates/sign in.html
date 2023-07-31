@@ -1,0 +1,40 @@
+<html>
+<head>
+{% load static%}
+<link rel="stylesheet" type='text/css' href="{% static 'css/main.css' %}">
+<title>sign-in</title>
+</head>
+<body>
+<div class= titoo>
+<h1>sign-in</h1>
+</div>
+<div>
+<br>
+<form class="sig" action="sign" method="post">
+{% csrf_token %}
+CREATE AN ACCOUNT
+<br>
+<br>
+<br>
+username
+<input type="text" name="username" placeholder"enter"/>
+<br>
+<br>
+password
+<input type="password" name="pass1"/>
+<br>
+<br>
+confirm password
+<input type="password" name="pass2"/>
+<br>
+<br>
+<input type="submit"value="sign in"/>
+</form>
+</div>
+<div>
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+</div>
+</body>
+</html>

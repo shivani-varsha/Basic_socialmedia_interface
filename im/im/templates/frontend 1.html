@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>Intouch</title>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+{% if user.is_authenticated %}
+<body class='b1'>
+<div class="account">
+<span><h1>
+{% if user.is_authenticated %}
+<h2>Hello, {{user.username}}</h2>
+<a href="{% url 'newo:logout' %}">logout</a>
+{% else%}
+<a href="{% url 'newo:login' %}">login</a>
+<a href="{% url 'newo:sign' %}">sign-in</a>
+{% endif %}
+</h1>
+</span>
+</div>
+<div class="para">
+</div>
+<div class=posty>
+<br>
+<h1>POST</h1>
+<br>
+<br>
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+<form class="cm" action="post" method="post">
+{% csrf_token %}
+<br>
+<label for='cm'>comment:</label>
+<input type="text" name="cm"/>
+<input type="submit"value="post"/>
+</form>
+</div>
+<div>
+{% for message in messages %}
+<h1>{{message}}</h1>
+{% endfor %}
+</div>
+</body>
+{% else%}
+<body class="b2">
+<img src="../static/imgo/14.png.jpg" />
+<div class='prop'>
+<h1>INTOUCH</h1>
+{% if user.is_authenticated %}
+<h2>Hello, {{user.username}}</h2>
+<a href="{% url 'newo:logout' %}">logout</a>
+{% else%}
+<h1>
+<a href="{% url 'newo:login' %}">login</a></h1>
+<h1>
+<a href="{% url 'newo:sign' %}">sign-in</a>
+{% endif %}
+</h1>
+</div>
+<div class="para">
+<p>Hi this is INTOUCH DEVELOPMENTS.ltd.
+It connects with all around the world.
+This is a new way of communication that gives all free comfortable chat.
+It will make you feel get in touch with other people.
+You can share your views and project work ideas and even it makes you easy to feel to
+talk to others to get stress free and get depression gone forever.
+You can even share your emotions and stressful life to others.</p>
+</div>
+<div>
+{% for message in messages %}
+<h1>{{message}}</h1>
+{% endfor %}
+</div>
+</body>
+{% endif %}
+</html>

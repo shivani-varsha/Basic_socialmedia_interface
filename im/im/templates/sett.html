@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Information Form</title>
+  <br>
+  <h2>{{user.username}}</h2>
+  <style>
+    body
+    {
+        background-color:aqua;
+    }
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+      width: 100%;
+      padding: 8px;
+    }
+    .form-group textarea {
+      width: 100%;
+      height: 80px;
+      padding: 8px;
+    }
+    .form-group input[type="file"] {
+      margin-top: 5px;
+    }
+    .form-group input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>User Information Form</h2>
+    <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token  %}
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name"  value="{{user_profile.user}}"name="user" required>
+      </div>
+      <div class="form-group">
+        <label for="email">user-id:</label>
+        <input type="text" id="email" value="{{user_profile.id_user}}" name="id_user" required>
+      </div>
+      <div class="form-group">
+        <label for="location">location:</label>
+        <input type="text" id="email" value= "{{user_profile.location}}" name="location" required>
+      </div>
+      <div class="form-group">
+        <label for="bio">Bio:</label>
+        <textarea id="bio" name="bio" required>{{user_profile.bio}}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="image">Upload Image:</label>
+        <img width="100" height="100" src="{{user_profile.profimg.url}}" />
+        <input type="file" id="image"  name="image">
+      </div>
+      <div class="form-group">
+       <input type="submit" value="Submit">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+

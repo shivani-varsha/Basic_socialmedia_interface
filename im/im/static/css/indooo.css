@@ -1,0 +1,186 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: aquamarine;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 18%;
+    border-bottom: 1px solid rgba(219,219,219);
+    background-color:black;
+    padding-left: 0px;
+}
+img[src="../static/imgo/lo.png"]
+{
+    height:190px;
+    width:290px;
+}
+img[src="../static/imgo/search.png"]
+{
+    height:25px;
+    width:25px;
+    border-radius:40%;
+    position:absolute;
+    top:55px;
+    left:450px; 
+}
+
+
+header.search
+{
+    width:500px;
+    background-color: rgba(239,239,239,1);
+    padding: 3px 16px;
+    display:flex;
+    align-items:center;
+    border-radius:8px;
+    position:absolute;
+    top:50px;
+    left:350px;
+    
+
+}
+header .search input
+{
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 245, 245, 0.5);
+    padding-left: 10px;
+    position:absolute;
+    top:50px;
+    left:500px; 
+}
+header nav ul
+{
+    list-style: none;
+    display: flex;
+    margin-right:0px;
+    width:500px;
+    height:50px;
+    justify-content: space-evenly;
+    padding-left: 200px;
+    color:white;
+    box-sizing: content-box;
+
+}
+header nav ul li img
+{
+    width:30px;
+    height:30px;
+    border-radius: 40%;
+    object-fit: cover;
+}
+.icons
+{
+    width:500px;
+}
+.story ul
+{
+    display: flex;
+    width:500px;
+    height:80px;
+    list-style: none;
+    justify-content: space-evenly;
+    position: absolute;
+    top:280px;
+    left:280px;
+    background-color: rgb(164, 255, 191);
+    border-bottom: 5px solid black;
+}
+.names{
+    display: flex;
+    position: absolute;
+    top:343px;
+    color: rgb(0, 0, 10);
+    left:275px;
+    justify-content: space-evenly;
+    list-style: none;
+    width:500px;
+
+}
+.story ul li img
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    top:10px;
+    border: 3px solid rgb(255, 0, 55);
+}
+
+a{
+  text-decoration: none;
+}
+
+.instagram-card{
+	background: #ffffff;
+	border: 1px solid #f2f2f2;
+	border-radius: 3px;
+	width: 100%;
+	max-width: 600px;
+	margin: auto;
+    padding-left: 0px;}
+
+.instagram-card-header{
+	padding: 20px;
+	height: 40px;
+}
+
+.instagram-card-user-image{
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+}
+
+.instagram-card-time{
+	float: right;
+	width: 80px;
+	padding-top:10px;
+	text-align: right;
+	color: #999;
+}
+
+.instagram-card-user-name{
+	margin-left:20px;
+	font-weight:bold;
+  color: #262626;
+}
+
+.instagram-card-content{
+  padding: 20px;
+}
+
+.likes{
+    height: 50px;
+    width:50px;
+    border-radius: 50px;
+}
+
+.instagram-card-content-user{
+  font-weight: bold;
+  color: #262626;
+}
+.instagram-card-image{
+    width: 600px;
+    height: 400px;
+}
+.titlo{
+    font:bold;
+    color: blueviolet;
+    padding-top: 100px;
+    padding-left:400px ;
+}
+.form-group{
+    padding-left: 400px;
+    justify-content: center;
+}
+.up{
+    border:3px double black;
+}

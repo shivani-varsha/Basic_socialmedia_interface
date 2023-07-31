@@ -1,0 +1,36 @@
+<html>
+<head>
+{% load static%}
+<link rel="stylesheet" type='text/css' href="{% static 'css/main.css' %}">
+<title>login site</title>
+</head>
+<body>
+<div class= tito>
+<h1>Login</h1>
+</div>
+<div>
+<br>
+<form class="log" action="login" method="post">
+{% csrf_token %}
+ACCOUNT
+<br>
+<br>
+<br>
+USERNAME
+<input type="text" name="username"/>
+<br>
+<br>
+password
+<input type="password" name="password"/>
+<br>
+<br>
+<input type="submit"value="login"/>
+</form>
+</div>
+<div>
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>BLACKRICH GADGETS</title>
+{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/indooo.css' %}">
+</head>
+<body>
+<div class="intouch">
+<header>
+<img src="../static/imgo/lo.png">
+<img src="../static/imgo/search.png">
+<div class="search">
+<input type="search" placeholder="search">
+</div>
+<nav class="icons">
+<ul>
+<li><a href="/register/settings"><img src="../static/imgo/home.png"></a></li>
+<li><a href="/imo/upload"><img src="../static/imgo/post.png"></a></li>
+<li><img src="../static/imgo/chat.png"></li>
+<li><img src="{{user_profile.profimg.url}}"></li>
+<li><h2>Hello, {{user.username}}</h2>
+</li>
+</ul>
+</nav>
+</header>
+<br>
+<br>
+{% for post in posts reversed %}
+  <div class="instagram-card">
+    <div class="instagram-card-header">
+      <img src="{{user_profile.profimg.url}}" class="instagram-card-user-image"/>
+      <a class="instagram-card-user-name" href="/register/settings">{{post.user}}</a>
+      <div class="instagram-card-time">58 min</div>
+    </div>
+    <div>
+    <img src="{{post.image.url}}" class="instagram-card-image"/>
+    </div>
+    <div class="instagram-card-content">
+    <a href=""><p><img src="../static/imgo/heart.png" class="likes"></p></a>
+      <p>{{post.caption}}</p>
+  </div>
+{% endfor %}
+</body>
+</html>
